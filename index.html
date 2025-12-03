@@ -1,1 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joaswin Thottumkara's Thrissur Tech Journey</title>
+    <style>
+        /* CSS Styles */
+        :root {
+            --primary-color: #007bff; /* A nice blue for technology/education */
+            --secondary-color: #ffc107; /* A golden/yellow, reminiscent of Kerala festivals like Pooram */
+            --background-color: #f8f9fa; /* Light background */
+            --card-background: #ffffff; /* White card background */
+            --text-color: #343a40; /* Dark text */
+            --font-family: 'Arial', sans-serif;
+        }
 
+        body {
+            font-family: var(--font-family);
+            background-color: var(--background-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            overflow: hidden;
+            background-color: var(--card-background);
+        }
+
+        /* --- Header Section --- */
+        .header {
+            background: linear-gradient(135deg, var(--primary-color), #0056b3);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            letter-spacing: 1px;
+        }
+
+        .header p {
+            margin-top: 5px;
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .profile-icon {
+            font-size: 4em;
+            line-height: 1;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        /* --- Content Sections --- */
+        .content-section {
+            padding: 30px;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .content-section:last-child {
+            border-bottom: none;
+        }
+
+        .content-section h2 {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--secondary-color);
+            display: inline-block;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 15px 10px;
+            text-align: left;
+        }
+
+        .info-grid strong {
+            color: var(--text-color);
+            font-weight: 600;
+        }
+
+        .info-grid span {
+            font-weight: 400;
+        }
+
+        /* --- Footer Section --- */
+        .footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #e9ecef;
+            color: var(--text-color);
+            font-size: 0.9em;
+        }
+
+        /* Thrissur Pooram inspired element */
+        .pooram-detail {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 1.5em;
+            color: var(--secondary-color);
+        }
+
+        /* GPTC Thriprayar specific styling */
+        .college-detail {
+            background-color: #fff3cd; /* Light yellow background */
+            padding: 15px;
+            border-left: 5px solid var(--secondary-color);
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <header class="header">
+            <span class="profile-icon">👨‍🎓</span>
+            <h1>JOASWIN THOTTUMKARA</h1>
+            <p>A Tech Enthusiast from the Cultural Capital</p>
+            <span class="pooram-detail" title="Inspired by Thrissur Pooram">🐘</span>
+        </header>
+
+        <section class="content-section">
+            <h2>📚 Academic Journey</h2>
+            <div class="info-grid">
+                <strong>Current Institute:</strong>
+                <span>Sree Rama Government Polytechnic College</span>
+
+                <strong>Location:</strong>
+                <span>Thriprayar, Thrissur</span>
+
+                <strong>Program:</strong>
+                <span>Diploma in Engineering (e.g., Computer/Electronics/Mechanical)</span>
+                
+                <strong>Hometown Pride:</strong>
+                <span>Thrissur - The cultural hub of Kerala.</span>
+            </div>
+            <div class="college-detail">
+                "Striving for technical excellence at **GPTC Thriprayar**."
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>📍 Personal & Contact</h2>
+            <div class="info-grid">
+                <strong>Residence:</strong>
+                <span>Thrissur, Kerala</span>
+
+                <strong>Interests:</strong>
+                <span>Coding, Gadgets, Malayalam Cinema, Local Heritage</span>
+
+                <strong>Connect:</strong>
+                <span>[Placeholder for GitHub/LinkedIn/Email]</span>
+            </div>
+        </section>
+
+        <footer class="footer">
+            &copy; 2025 Joaswin Thottumkara | Page designed with 💙 from Kerala
+        </footer>
+
+    </div>
+
+</body>
+</html>
