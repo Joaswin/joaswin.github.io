@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joaswin Thottumkara's Thrissur Tech Journey</title>
+    <title>Joaswain Thottumkara's Vypin Tech Profile</title>
     <style>
-        /* CSS Styles */
+        /* CSS Styles for the Vypin/Coastal theme (Islands of Kochi) */
         :root {
-            --primary-color: #007bff; /* A nice blue for technology/education */
-            --secondary-color: #ffc107; /* A golden/yellow, reminiscent of Kerala festivals like Pooram */
-            --background-color: #f8f9fa; /* Light background */
-            --card-background: #ffffff; /* White card background */
-            --text-color: #343a40; /* Dark text */
-            --font-family: 'Arial', sans-serif;
+            --primary-color: #008080; /* Teal/Sea Green for backwater and coastal vibe */
+            --secondary-color: #ffcc00; /* Sandy Yellow/Lighthouse beam */
+            --background-color: #f0f8ff; /* Light, airy sky blue */
+            --card-background: #ffffff;
+            --text-color: #2f4f4f; /* Dark Slate Gray */
+            --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         body {
@@ -25,105 +25,183 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
+            /* Coastal/Lighthouse inspired background */
+            background-image: linear-gradient(135deg, #c7e5ff, #aed6f1);
+            background-attachment: fixed;
         }
 
         .container {
             width: 90%;
-            max-width: 800px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-            border-radius: 15px;
+            max-width: 550px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            border-radius: 20px;
             overflow: hidden;
-            background-color: var(--card-background);
+            background: rgba(255, 255, 255, 0.95);
+            padding: 0;
         }
 
         /* --- Header Section --- */
         .header {
-            background: linear-gradient(135deg, var(--primary-color), #0056b3);
+            background: linear-gradient(135deg, var(--primary-color), #004d4d);
             color: white;
-            padding: 40px 20px;
+            padding: 30px 20px;
             text-align: center;
             position: relative;
+            border-bottom: 5px solid var(--secondary-color);
+            border-radius: 20px 20px 0 0;
         }
 
-        .header h1 {
+        .header-top {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 10px;
+        }
+
+        .profile-title {
+            text-align: center;
+        }
+
+        .profile-title h1 {
             margin: 0;
-            font-size: 2.5em;
-            letter-spacing: 1px;
+            font-size: 1.8em;
+            letter-spacing: 0.5px;
+            font-weight: 700;
         }
 
-        .header p {
-            margin-top: 5px;
-            font-size: 1.1em;
-            opacity: 0.9;
+        .profile-title p {
+            margin-top: 2px;
+            font-size: 0.9em;
+            opacity: 0.8;
+            font-weight: 300;
+        }
+        
+        .logo-icon {
+            font-size: 3em;
+            color: var(--secondary-color);
+            margin-right: 10px;
         }
 
-        .profile-icon {
-            font-size: 4em;
-            line-height: 1;
-            display: block;
-            margin-bottom: 10px;
+        /* Vypin Specific Detail - Lighthouse or Boat Icon */
+        .coastal-detail {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 2em;
+            color: var(--secondary-color);
         }
 
         /* --- Content Sections --- */
         .content-section {
             padding: 30px;
-            border-bottom: 1px solid #e9ecef;
+            border-bottom: 1px solid #dfe6e9;
         }
 
-        .content-section:last-child {
+        .content-section:last-of-type {
             border-bottom: none;
+            padding-bottom: 20px;
         }
 
         .content-section h2 {
             color: var(--primary-color);
-            border-bottom: 3px solid var(--secondary-color);
-            display: inline-block;
-            padding-bottom: 5px;
-            margin-bottom: 20px;
-            font-size: 1.5em;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+            font-weight: 600;
+        }
+        
+        .academic-icon, .contact-icon {
+            margin-right: 8px;
+            color: var(--primary-color);
+            font-size: 1.2em;
         }
 
         .info-grid {
             display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 15px 10px;
-            text-align: left;
+            grid-template-columns: 1.2fr 2fr;
+            gap: 10px 5px;
+            font-size: 0.95em;
         }
 
         .info-grid strong {
             color: var(--text-color);
-            font-weight: 600;
+            font-weight: 500;
         }
 
-        .info-grid span {
-            font-weight: 400;
+        /* College Detail Block */
+        .college-detail {
+            background: #f0fff0; /* Very light green/seafoam */
+            padding: 12px 20px;
+            border-left: 4px solid var(--primary-color);
+            border-radius: 8px;
+            margin-top: 20px;
+            font-style: italic;
+            font-size: 1em;
+            font-weight: 500;
+            color: #38761d; /* Darker green text */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
         }
+        
+        .courses-list {
+            grid-column: 1 / -1; 
+            margin-top: 10px;
+            line-height: 1.6;
+            padding-left: 20px;
+        }
+        
+        .courses-list li {
+            margin-bottom: 4px;
+        }
+
+
+        /* Personal & Contact */
+        .interests-line {
+            grid-column: 1 / -1;
+            margin-top: 5px;
+            line-height: 1.5;
+        }
+
+        .contact-icons {
+            grid-column: 1 / -1;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .icon-link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: var(--primary-color);
+            font-size: 0.8em;
+        }
+
+        .icon-link span {
+            font-size: 2em;
+            line-height: 1;
+        }
+        
+        .icon-link .github { color: #333; }
+        .icon-link .linkedin { color: #0077b5; }
+        .icon-link .email { color: #cc3333; }
 
         /* --- Footer Section --- */
         .footer {
             text-align: center;
-            padding: 15px;
-            background-color: #e9ecef;
-            color: var(--text-color);
-            font-size: 0.9em;
+            padding: 15px 30px;
+            background-color: var(--primary-color);
+            color: white;
+            font-size: 0.85em;
+            border-radius: 0 0 20px 20px;
+            opacity: 0.95;
         }
 
-        /* Thrissur Pooram inspired element */
-        .pooram-detail {
-            position: absolute;
-            top: 10px;
-            right: 20px;
-            font-size: 1.5em;
-            color: var(--secondary-color);
-        }
-
-        /* GPTC Thriprayar specific styling */
-        .college-detail {
-            background-color: #fff3cd; /* Light yellow background */
-            padding: 15px;
-            border-left: 5px solid var(--secondary-color);
-            border-radius: 5px;
-            margin-top: 15px;
+        .footer span {
+            font-size: 1.2em;
+            vertical-align: middle;
+            margin: 0 5px;
         }
     </style>
 </head>
@@ -132,48 +210,68 @@
     <div class="container">
 
         <header class="header">
-            <span class="profile-icon">👨‍🎓</span>
-            <h1>JOASWIN THOTTUMKARA</h1>
-            <p>A Tech Enthusiast from the Cultural Capital</p>
-            <span class="pooram-detail" title="Inspired by Thrissur Pooram">🐘</span>
+            <div class="header-top">
+                <span class="logo-icon">💡</span>
+                <div class="profile-title">
+                    <h1>JOASWAIN THOTTUMKARA</h1>
+                    <p>A Tech Enthusiast from the Scenic Islands of Kochi</p>
+                </div>
+            </div>
+            <span class="coastal-detail" title="Vypin Lighthouse">燈</span>
         </header>
 
         <section class="content-section">
-            <h2>📚 Academic Journey</h2>
+            <h2><span class="academic-icon">📚</span> Academic Journey</h2>
             <div class="info-grid">
                 <strong>Current Institute:</strong>
                 <span>Sree Rama Government Polytechnic College</span>
 
                 <strong>Location:</strong>
-                <span>Thriprayar, Thrissur</span>
+                <span>Vypin, Ernakulam (As requested by user)</span>
 
-                <strong>Program:</strong>
-                <span>Diploma in Engineering (e.g., Computer/Electronics/Mechanical)</span>
+                <strong>Program Focus:</strong>
+                <span>Diploma in Engineering</span>
                 
                 <strong>Hometown Pride:</strong>
-                <span>Thrissur - The cultural hub of Kerala.</span>
+                <span>Vypin Island - The coastal gateway to Ernakulam.</span>
             </div>
             <div class="college-detail">
-                "Striving for technical excellence at **GPTC Thriprayar**."
+                "Technical training on the coast. Notable Diploma branches include:"
+                <ul class="courses-list">
+                    <li>Civil & Mechanical Engineering</li>
+                    <li>Computer & Electronics Engineering</li>
+                    <li>Electrical & Electronics Engineering</li>
+                </ul>
             </div>
         </section>
 
         <section class="content-section">
-            <h2>📍 Personal & Contact</h2>
+            <h2><span class="contact-icon">👤</span> Personal & Contact</h2>
             <div class="info-grid">
                 <strong>Residence:</strong>
-                <span>Thrissur, Kerala</span>
+                <span>Vypin, Ernakulam, Kerala</span>
 
                 <strong>Interests:</strong>
-                <span>Coding, Gadgets, Malayalam Cinema, Local Heritage</span>
-
-                <strong>Connect:</strong>
-                <span>[Placeholder for GitHub/LinkedIn/Email]</span>
+                <span class="interests-line">Coding, Robotics, Coastal Culture, Local History & Gadgets</span>
+            </div>
+            <div class="contact-icons">
+                <a href="#" class="icon-link">
+                    <span class="github">🖥️</span>
+                    <span>GitHub</span>
+                </a>
+                <a href="#" class="icon-link">
+                    <span class="linkedin">in</span>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="#" class="icon-link">
+                    <span class="email">📧</span>
+                    <span>Connect</span>
+                </a>
             </div>
         </section>
 
         <footer class="footer">
-            &copy; 2025 Joaswin Thottumkara | Page designed with 💙 from Kerala
+            &copy; 2025 Joaswain Thottumkara | Page designed with 🌊 from Vypin
         </footer>
 
     </div>
