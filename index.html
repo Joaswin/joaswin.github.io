@@ -1,273 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joaswain Thottumkara</title>
-    <style>
-        /* CSS Styles for the Vypin/Coastal theme (Islands of Kochi) */
-        :root {
-            --primary-color: #008080; /* Teal/Sea Green for backwater and coastal vibe */
-            --secondary-color: #ffcc00; /* Sandy Yellow/Lighthouse beam */
-            --background-color: #f0f8ff; /* Light, airy sky blue */
-            --card-background: #ffffff;
-            --text-color: #2f4f4f; /* Dark Slate Gray */
-            --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Joaswin Thottumkara - Portfolio</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
-        body {
-            font-family: var(--font-family);
-            background-color: var(--background-color);
-            color: var(--text-color);
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            /* Coastal/Lighthouse inspired background */
-            background-image: linear-gradient(135deg, #c7e5ff, #aed6f1);
-            background-attachment: fixed;
-        }
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background: linear-gradient(135deg, #e8ecf3, #f9fbff);
+      color: #1c1f26;
+    }
 
-        .container {
-            width: 90%;
-            max-width: 550px;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-            border-radius: 20px;
-            overflow: hidden;
-            background: rgba(255, 255, 255, 0.95);
-            padding: 0;
-        }
+    header {
+      background: linear-gradient(135deg, #1f2a3a, #2e3a4f);
+      color: white;
+      padding: 70px 20px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
 
-        /* --- Header Section --- */
-        .header {
-            background: linear-gradient(135deg, var(--primary-color), #004d4d);
-            color: white;
-            padding: 30px 20px;
-            text-align: center;
-            position: relative;
-            border-bottom: 5px solid var(--secondary-color);
-            border-radius: 20px 20px 0 0;
-        }
+    header h1 {
+      margin: 0;
+      font-size: 50px;
+      font-weight: 700;
+    }
 
-        .header-top {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding-bottom: 10px;
-        }
+    header h2 {
+      margin-top: 15px;
+      font-weight: 300;
+      font-size: 24px;
+      opacity: 0.9;
+    }
 
-        .profile-title {
-            text-align: center;
-        }
+    section {
+      padding: 40px;
+      margin: 30px auto;
+      background: white;
+      max-width: 950px;
+      border-radius: 16px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      transition: 0.3s ease;
+    }
 
-        .profile-title h1 {
-            margin: 0;
-            font-size: 1.8em;
-            letter-spacing: 0.5px;
-            font-weight: 700;
-        }
+    section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    }
 
-        .profile-title p {
-            margin-top: 2px;
-            font-size: 0.9em;
-            opacity: 0.8;
-            font-weight: 300;
-        }
-        
-        .logo-icon {
-            font-size: 3em;
-            color: var(--secondary-color);
-            margin-right: 10px;
-        }
+    h3 {
+      color: #2e3a4f;
+      border-left: 5px solid #2e3a4f;
+      padding-left: 12px;
+      font-size: 26px;
+      margin-bottom: 20px;
+    }
 
-        /* Vypin Specific Detail - Lighthouse or Boat Icon */
-        .coastal-detail {
-            position: absolute;
-            top: 15px;
-            right: 20px;
-            font-size: 2em;
-            color: var(--secondary-color);
-        }
+    ul {
+      line-height: 2;
+      padding-left: 20px;
+    }
 
-        /* --- Content Sections --- */
-        .content-section {
-            padding: 30px;
-            border-bottom: 1px solid #dfe6e9;
-        }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 15px;
+    }
 
-        .content-section:last-of-type {
-            border-bottom: none;
-            padding-bottom: 20px;
-        }
+    .skill-box {
+      background: #f1f4f9;
+      padding: 12px 15px;
+      border-radius: 10px;
+      text-align: center;
+      font-weight: 600;
+      color: #2e3a4f;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.07);
+    }
 
-        .content-section h2 {
-            color: var(--primary-color);
-            margin-bottom: 15px;
-            font-size: 1.4em;
-            font-weight: 600;
-        }
-        
-        .academic-icon, .contact-icon {
-            margin-right: 8px;
-            color: var(--primary-color);
-            font-size: 1.2em;
-        }
+    .contact p {
+      font-size: 18px;
+    }
 
-        .info-grid {
-            display: grid;
-            grid-template-columns: 1.2fr 2fr;
-            gap: 10px 5px;
-            font-size: 0.95em;
-        }
-
-        .info-grid strong {
-            color: var(--text-color);
-            font-weight: 500;
-        }
-
-        /* College Detail Block */
-        .college-detail {
-            background: #f0fff0; /* Very light green/seafoam */
-            padding: 12px 20px;
-            border-left: 4px solid var(--primary-color);
-            border-radius: 8px;
-            margin-top: 20px;
-            font-style: italic;
-            font-size: 1em;
-            font-weight: 500;
-            color: #38761d; /* Darker green text */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-        }
-        
-        .courses-list {
-            grid-column: 1 / -1; 
-            margin-top: 10px;
-            line-height: 1.6;
-            padding-left: 20px;
-        }
-        
-        .courses-list li {
-            margin-bottom: 4px;
-        }
-
-
-        /* Personal & Contact */
-        .interests-line {
-            grid-column: 1 / -1;
-            margin-top: 5px;
-            line-height: 1.5;
-        }
-
-        .contact-icons {
-            grid-column: 1 / -1;
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            gap: 15px;
-            margin-top: 15px;
-        }
-
-        .icon-link {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-decoration: none;
-            color: var(--primary-color);
-            font-size: 0.8em;
-        }
-
-        .icon-link span {
-            font-size: 2em;
-            line-height: 1;
-        }
-        
-        .icon-link .github { color: #333; }
-        .icon-link .linkedin { color: #0077b5; }
-        .icon-link .email { color: #cc3333; }
-
-        /* --- Footer Section --- */
-        .footer {
-            text-align: center;
-            padding: 15px 30px;
-            background-color: var(--primary-color);
-            color: white;
-            font-size: 0.85em;
-            border-radius: 0 0 20px 20px;
-            opacity: 0.95;
-        }
-
-        .footer span {
-            font-size: 1.2em;
-            vertical-align: middle;
-            margin: 0 5px;
-        }
-    </style>
+    .footer {
+      background: #1f2a3a;
+      color: white;
+      padding: 25px;
+      text-align: center;
+      margin-top: 40px;
+      font-size: 15px;
+      letter-spacing: 1px;
+    }
+  </style>
 </head>
 <body>
 
-    <div class="container">
+<header>
+  <h1>Joaswin Thottumkara</h1>
+  <h2>Cybersecurity Student</h2>
+</header>
 
-        <header class="header">
-            <div class="header-top">
-                <span class="logo-icon">💡</span>
-                <div class="profile-title">
-                    <h1>JOASWAIN THOTTUMKARA</h1>
-                    <p>A Tech Enthusiast from the Scenic Islands of Kochi</p>
-                </div>
-            </div>
-            <span class="coastal-detail" title="Vypin Lighthouse">燈</span>
-        </header>
+<section>
+  <h3>About Me</h3>
+  <p>
+    I am a passionate and curious cybersecurity student dedicated to exploring ethical hacking,
+    vulnerability assessment, and cyber defense. My interests include penetration testing,
+    malware analysis, and AI-based threat detection. I continuously strive to improve my skills
+    and contribute meaningfully to the cybersecurity domain.
+  </p>
+</section>
 
-        <section class="content-section">
-            <h2><span class="academic-icon">📚</span> Academic Journey</h2>
-            <div class="info-grid">
-                <strong>Current Institute:</strong>
-                <span>Sree Rama Government Polytechnic College</span>
+<section>
+  <h3>Skills Overview</h3>
 
-                <strong>Location:</strong>
-                <span>Vypin, Ernakulam</span>
+  <h4>Technical Skills</h4>
+  <div class="skills-grid">
+    <div class="skill-box">Nmap</div>
+    <div class="skill-box">Burp Suite</div>
+    <div class="skill-box">Hydra</div>
+    <div class="skill-box">Nessus</div>
+    <div class="skill-box">Metasploit</div>
+  </div>
 
-                <strong>Program Focus:</strong>
-                <span>Diploma in Engineering</span>
-                
-                <strong>Hometown Pride:</strong>
-                <span>Vypin Island - The coastal gateway to Ernakulam.</span>
-            </div>
-            
-        </section>
+  <br>
 
-        <section class="content-section">
-            <h2><span class="contact-icon">👤</span> Personal & Contact</h2>
-            <div class="info-grid">
-                <strong>Residence:</strong>
-                <span>Vypin, Ernakulam, Kerala</span>
+  <h4>Soft Skills</h4>
+  <div class="skills-grid">
+    <div class="skill-box">Problem Solving</div>
+    <div class="skill-box">Teamwork</div>
+    <div class="skill-box">Communication</div>
+    <div class="skill-box">Adaptability</div>
+  </div>
+</section>
 
-                <strong>Interests:</strong>
-                <span class="interests-line">Coding, Robotics, Coastal Culture, Local History & Gadgets</span>
-            </div>
-            <div class="contact-icons">
-                <a href="#" class="icon-link">
-                    <span class="github">🖥️</span>
-                    <span>GitHub</span>
-                </a>
-                <a href="#" class="icon-link">
-                    <span class="linkedin">in</span>
-                    <span>LinkedIn</span>
-                </a>
-                <a href="#" class="icon-link">
-                    <span class="email">📧</span>
-                    <span>Connect</span>
-                </a>
-            </div>
-        </section>
+<section>
+  <h3>Experience</h3>
+  <p><strong>Intern — CDAC Trivandrum</strong></p>
+  <p>Kerala | Cybersecurity Internship</p>
+  <ul>
+    <li>Worked with cybersecurity tools and penetration testing methodologies.</li>
+    <li>Assisted in basic malware research and system vulnerability analysis.</li>
+    <li>Hands-on exposure to security frameworks and real-world cyber environments.</li>
+  </ul>
+</section>
 
-        <footer class="footer">
-            &copy; 2025 Joaswain Thottumkara
-        </footer>
+<section>
+  <h3>Education</h3>
+  <p><strong>Diploma</strong></p>
+</section>
 
-    </div>
+<section>
+  <h3>Projects & Achievements</h3>
+  <ul>
+    <li><strong>Password Hashing:</strong> Implemented secure password hashing using modern cryptographic standards.</li>
+    <li><strong>AI Malware Classifier:</strong> Developed an AI-based model capable of predicting and classifying malware threats.</li>
+  </ul>
+</section>
+
+<section class="contact">
+  <h3>Contact</h3>
+  <p>Email: (add your email)</p>
+  <p>Phone: (add your phone)</p>
+  <p>LinkedIn: (add your link)</p>
+</section>
+
+<div class="footer">
+  © 2025 Joaswin Thottumkara — Portfolio
+</div>
 
 </body>
 </html>
